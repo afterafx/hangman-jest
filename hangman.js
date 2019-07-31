@@ -38,12 +38,7 @@ function playHangman(
 
   if (wordIncludesLetter(targetWord, guessedLetter)) {
     print('Good guess!');
-    playHangman(
-      targetWord,
-      fillInGuessedLetters(guessedLetter, guessedWord, targetWord),
-      strikes,
-      maxStrikes
-    );
+    playHangman(targetWord, fillInGuessedLetters(guessedLetter, guessedWord, targetWord), strikes, maxStrikes);
   } else {
     print(`Wrong! You have ${maxStrikes - (strikes + 1)} strikes left`);
     playHangman(targetWord, guessedWord, strikes + 1, maxStrikes);
